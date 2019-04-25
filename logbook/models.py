@@ -4,12 +4,14 @@ from django.utils import timezone
 
 class Diver(models.Model):
     account = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
     certification_org = models.CharField(max_length=100)
     certification_level = models.CharField(max_length=100)
     certification_date = models.DateField()
 
-    # def __str__(self):
-    #     return self.account.username
+    def __str__(self):
+        return '%s %s' % (self.first_name, self.last_name)
 
     def get_date_of_last_dive(self):
         return self.dives.latest('date').date
