@@ -16,6 +16,9 @@ class Diver(models.Model):
     def get_date_of_last_dive(self):
         return self.dives.latest('date').date
 
+    def get_total_number_of_dives(self):
+        return self.dives.count()
+
 class Dive(models.Model):
     diver = models.ForeignKey(Diver, on_delete=models.CASCADE, related_name='dives')
     location = models.CharField(max_length=100)
