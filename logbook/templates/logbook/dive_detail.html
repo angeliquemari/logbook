@@ -1,0 +1,12 @@
+{% extends 'logbook/base.html' %}
+
+{% block content %}
+    <div class="dive">
+      <h3>{{ dive }}</h3>
+      <p>Start time: {{ dive.start_time }}</p>
+      <p>Bottom time: {{ dive_duration }}</p>
+      <p>Max depth: {{ dive.max_depth }}m</p>
+      <p>Buddy: {{ dive.buddy_name }}</p>
+      <p>Notes: {{ dive.log_text }}</p>
+    </div>
+{% endblock %}

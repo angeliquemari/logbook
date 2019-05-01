@@ -1,0 +1,9 @@
+{% extends 'logbook/base.html' %}
+
+{% block content %}
+    {% for dive in dives %}
+        <div class="dive">
+            <h3><a href="{% url 'dive_detail' pk=dive.pk %}">{{ dive }}</a></h3>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'logbook/base.html' %}
+
+{% block content %}
+    <h3>{{ diver }}</h3>
+    <p>Certification organization: {{ diver.certification_org }}</p>
+    <p>Certification level: {{ diver.certification_level }}</p>
+    <p>Certification level: {{ diver.certification_date }}</p>
+    <p>Date of last dive: {{ date_of_last_dive }}</p>
+    <p>Total number of dives: {{ total_number_of_dives }}</p>
+{% endblock %}
