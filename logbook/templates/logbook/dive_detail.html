@@ -8,5 +8,6 @@
       <p>Max depth: {{ dive.max_depth }}m</p>
       <p>Buddy: {{ dive.buddy_name }}</p>
       <p>Notes: {{ dive.log_text }}</p>
+      <a class="btn btn-default" href="{% url 'dive_delete' pk=dive.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
     </div>
 {% endblock %}

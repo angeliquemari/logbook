@@ -35,9 +35,9 @@ h2 a, h3 a {
     float: right;
 }
 
-/* .post-form textarea, .post-form input {
+.dive-form textarea, .dive-form input {
     width: 100%;
-} */
+}
 
 .top-menu, .top-menu:hover, .top-menu:visited {
     color: #ffffff;
